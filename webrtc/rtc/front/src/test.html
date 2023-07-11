@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main class="content-center flex flex-row flex-wrap">
+      <div class="g-top">
+        <div class="top-remote-vid flex flex-wrap">
+          <div id="meeting-container" class="w-3/4 hidden >
+          <div class="call-wrap bg-black">
+            <div class="video-wrap flex flex-wrap" id="div-users">
+              <div id="me" class="flex-col content-center">
+                <h2 class="content-center text-sm"></h2>
+                <div class="content-center">
+                  <video autoplay muted id="local-video-player"></video>
+                </div>
+              </div>
+              <div id="other-template" class="content-center flex-col hidden">
+                <h2 class="content-center text-sm"></h2>
+                <div class="content-center">
+                  <video autoplay muted></video>
+                  <audio
+                    autoplay
+                    controls
+                    muted
+                    class="hidden"
+                    style="display: none"
+                  ></audio>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="g-top-left bg-white w-1/4 flex items-center justify-items-center px-2"
+      >
+        <div class="top-left-participant cursor-pointer pt-2">
+          <div class="top-left-participant-icon">
+            <span> ${people} </span>
+            <div class="top-left-participant-count"></div>
+          </div>
+          <div class="top-left-chat pt-2 cursor-pointer">
+            <span> ${message} </span>
+          </div>
+          <div class="top-left-time"></div>
+        </div>
+      </div>
+      <div class="g-bottom bg-slate-600 justify-between items-center">
+        <div class="bottom-left" style="height: 10vh">
+          <div class="cursor-pointer content-center meeting-details">
+            meeting details ${arrowd}
+          </div>
+        </div>
+        <div class="bottom-middle">
+          <div
+            class="mic-toggle content-center mr-2 cursor-pointer"
+            id="mic-mute"
+          >
+            <span>${micOff}</span>
+          </div>
+          <div class="end-call mr-2 content-center">${call}</div>
+        </div>
+        <div class="bottom-right"></div>
+      </div>
+    </main>
+  </body>
+</html>
